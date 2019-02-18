@@ -1,8 +1,8 @@
 # react_mern
-A mean MERN app.
+
+A basic MERN app.
 
 ### How to start the app
-1. Go to source directory of the folder using the command line
-2. type npm install and hit enter
-3. type npm start and hit enter
-4. go to the specified localhost and port shown in the command line logs
+
+Project root dir `npm start`
+This is just there to start the client and the server. Obv. I could have done it differently but this separates the parts nicely.

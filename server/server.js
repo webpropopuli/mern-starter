@@ -34,7 +34,7 @@ router.get("/", (req, res) => {
   return res.send("I'm a server. Don't talk to me like that!");
 });
 
-// this is our get method
+//# this is our get method
 // this method fetches all available data in our database
 router.get("/getData", (req, res) => {
   Data.find((err, data) => {
@@ -45,7 +45,7 @@ router.get("/getData", (req, res) => {
   });
 });
 
-// this is our update method
+//# this is our update method
 // this method overwrites existing data in our database
 router.post("/updateData", (req, res) => {
   console.log("SRV->UPDATE");
@@ -58,12 +58,13 @@ router.post("/updateData", (req, res) => {
   });
 });
 
-// this is our delete method
+//# this is our delete method
 // this method removes existing data in our database
 router.delete("/deleteData", (req, res) => {
   console.log("SRV->DEL");
   const { id } = req.body;
-  Data.findOneAndDelete(id, err => {
+  console.log("req.body", req.body);
+  Data.findByIdAndDelete(id, err => {
     if (err) return res.send(err);
     return res.json({ success: true });
   });
